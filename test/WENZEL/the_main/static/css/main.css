@@ -1,19 +1,16 @@
 body {
   background-image: url(../img/bg/headerback.jpg);
   background-blend-mode: multiply;
+  background-color: #1621c524!important;
   background-attachment: fixed;
   background-size: cover;
-  background-position: center;
+  background-position: center center;
+
+
 }
 
-.overlay {
-  position: absolute;
-  min-height: 100%;
-  min-width: 100%;
-  left: 0;
-  top: 0;
-  background: #b9b9b994;
-}
+
+
 
 .navbar {
   background: #F97300;
