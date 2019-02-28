@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>MyBlog</title>
+    {% block extrahead %}
+    {% endblock %}
+</head>
+
+<body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <div class="brand">My Blog</div>
+                <a href="{% url 'list' %}" class="">Список постов</a></li>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        {% block content %}Empty page{% endblock %}
+    </div> <!-- container -->
+
+</body>
+
+</html>
