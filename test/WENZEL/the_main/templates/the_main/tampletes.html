@@ -17,7 +17,7 @@
     <header class="header">
         <div class="overlay">
             <nav class="navbar fixed-top navbar-expand-lg  ">
-                <a class="navbar-brand" href="{% url 'the_main-home' %}">WENZEL</a>
+                <a class="navbar-brand" href="{% url 'the_main-test' %}">WENZEL</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@
                         </li>
                     </ul>
                     <div class="navbar-nav">
-                        <a href="" class="btn btn-outline-secondary mr-2">Регистрация</a>
+                        <a href="{% url 'reg' %}" class="btn btn-outline-secondary mr-2">Регистрация</a>
                         <a href="" class="btn btn-outline-secondary">Войти</a>
                     </div>
                 </div>
@@ -49,7 +49,14 @@
         </div>
     </header>
     <!-- .header-->
-     
+    {% if massages %}
+        {% for mess in messages %}
+            <div class="alert alert-success">
+                {{ mess }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
     {% block tmp_section %}
     {% endblock tmp_section %}
 

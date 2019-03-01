@@ -1,0 +1,29 @@
+{% extends 'the_main/tampletes.html' %}
+{% block tmp_section %}
+{% if massages %}
+{% for mess in messages %}
+<div class="alert alert-success">
+    {{ mess }}
+</div>
+{% endfor %}
+{% endif %}
+<main role="main" class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+                <h1>Регистрация пользователя</h1>
+                <p class="lead">заполните все поля по форме ниже</p>
+                <div>
+                    <form action="" method="post" class="post-form">
+                        {% csrf_token %}
+                        
+                            {{form.as_p}}
+                        
+                        <button type="submit" class="btn btn-lg btn-primary">отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock tmp_section %}
