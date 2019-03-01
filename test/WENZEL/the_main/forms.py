@@ -6,7 +6,12 @@ class SubscribersForm(forms.ModelForm):
         model = Subscribers
         fields = '__all__'
 
-class PostForm(forms.ModelForm):
+class apartmentForm(forms.ModelForm):
     class Meta:
-        model = Post
+        model = apartment
+        fields = ('title', 'text',)
+
+class rentalForm(forms.ModelForm):
+    class Meta:
+        model = rental
         fields = ('title', 'text',)

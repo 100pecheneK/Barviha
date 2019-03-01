@@ -14,7 +14,18 @@ class Subscribers(models.Model):
         max_length = 200,
         blank = True,
     )
-class Post(models.Model):
+class apartment(models.Model):
+    title = models.CharField(
+        max_length=200,
+        blank=True,
+    )
+
+    text = models.CharField(
+        max_length=200,
+        blank=True,
+    )
+
+class rental(models.Model):
     title = models.CharField(
         max_length=200,
         blank=True,

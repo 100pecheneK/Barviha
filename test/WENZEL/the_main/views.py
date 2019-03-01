@@ -2,10 +2,15 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from .forms import *
 
-def test(request):
+def apartment(request):
 
-    form_post = PostForm(request.POST)
-    return render(request, 'the_main/test.html', {'form': form_post, 'title': 'test страница'}, locals)
+    apartment = apartmentForm(request.POST)
+    return render(request, 'the_main/apartment.html', {'form': apartment, 'title': 'Квартиры'}, locals)
+
+def rental(request):
+
+    rental = rentalForm(request.POST)
+    return render(request, 'the_main/rental.html', {'form': rental, 'title': 'Аренда'}, locals)
 
 def home(request):
 
@@ -17,7 +22,7 @@ def home(request):
         username = form.cleaned_data.get('username')
         messages.success(request, f'Пользователь {username} был успешно зарегистрирован!')
         new_form =form.save()
-        return redirect('the_main-site')
+        return redirect('the_main-home')
     
     return render(request, 'the_main/home.html', {'form': form, 'title': 'Главная страница'})
 
@@ -25,4 +30,5 @@ def contacti(request):
     return render(request, 'the_main/contacti.html', {'title': 'Страничка контакты'})
 
 def site(request):
-    return render(request, 'the_main/site.html', {'title': 'сайт'})
+    return render(request, 'the_main/site.html', {'title': 'site'})
+

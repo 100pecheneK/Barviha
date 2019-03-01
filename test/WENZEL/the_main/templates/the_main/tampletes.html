@@ -17,7 +17,7 @@
     <header class="header">
         <div class="overlay">
             <nav class="navbar fixed-top navbar-expand-lg  ">
-                <a class="navbar-brand" href="{% url 'the_main-test' %}">WENZEL</a>
+                <a class="navbar-brand" href="#">WENZEL</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,13 +28,13 @@
                             <a class="nav-link" href="{% url 'the_main-home' %}">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="{% url 'the_main-site' %}">Portfolio</a>
+                            <a class="nav-link " href="{% url 'the_main-site' %}">site</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#">Team</a>
+                            <a class="nav-link " href="{% url 'the_main-apartment' %}">Квартиры</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link " href="#">Post</a>
+                            <a class="nav-link " href="{% url 'the_main-rental'%}">Аренда</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link " href="{% url 'the_main-contacti' %}">Contact</a>
