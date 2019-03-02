@@ -1,27 +1,24 @@
 {% extends 'the_main/tampletes.html' %}
-{% block tmp_section %}   
+{% block tmp_section %}
 <main role="main" class="container">
-        <div class="row">
-            <div class="col">
-                <div class="jumbotron">
-                        <h1>Аренда</h1>
-                    <h2>Скоро все откроется</h2>
-                    <p class="lead">Оставте Ваши пожелания по форме ниже</p>
-                    <div>
-                        <form action="" method="post" class="post-form">
-                            {% csrf_token %}
-                            <table>
-                                {{form.as_p}}
-                            </table>
-                            <button type="submit" class="btn btn-lg btn-primary">отправить</button>
-                        </form>
-                    </div>
-                    
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+                <h1>Аренда</h1>
+                <h2>Скоро все откроется</h2>
+                <p class="lead">Оставте Ваши пожелания по форме ниже</p>
+                <div>
+                    <form action="" method="post" class="post-form">
+                        {% csrf_token %}
+                        <table>
+                            {{form.as_p}}
+                        </table>
+                        <button type="submit" class="btn btn-lg btn-primary">отправить</button>
+                    </form>
                 </div>
+
             </div>
         </div>
-    </main>
-    {% endblock tmp_section %}
-
-
-
+    </div>
+</main>
+{% endblock tmp_section %}
