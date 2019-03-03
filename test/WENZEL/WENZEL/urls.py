@@ -18,8 +18,11 @@ from django.urls import path, include
 from the_main import views
 from users import views as userViews
 
+
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('the_main.urls')),
+    path('', include('blog.urls')),
     path('reg/', userViews.register, name='reg'),
 ]

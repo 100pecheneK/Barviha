@@ -17,6 +17,11 @@
     text-align: center;
     margin-bottom: 10px;
 }
+.jumbotron >h2  {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    margin-bottom: 10px;
+}
 .lead {
     text-align: center;
 }
