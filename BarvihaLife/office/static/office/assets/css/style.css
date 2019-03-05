@@ -29,12 +29,18 @@
 ------------------------------------------------------------------------*/
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700 | Source+Sans+Pro");
 /* 1 ---------- Global Styles ---------- */
-html,
+html{
+  height:100%;
+}
 body {
   background: #e4e4e4;
   font-family: 'Open Sans', 'Source Sans Pro', sans-serif;
   font-size: 16px;
-  line-height: 1; }
+  line-height: 1;
+  height:100%;
+}
+
+
 
 a {
   -webkit-transition: all 0.25s ease;
@@ -597,7 +603,9 @@ header.top-header {
       line-height: 75px;
       margin: 0;
       padding: 0 0 0 45px;
-      width: 100%; }
+      width: 100%; 
+    
+    }
       header.top-header .top-left .navbar-brand img {
         max-height: 45px; }
   header.top-header .top-right .left-content .sidenav-toggle {
@@ -977,16 +985,24 @@ header.top-header {
       -webkit-transition: all .25s ease;
       transition: all .25s ease; }
 
+/*      <!-- /-contents -->*/
+
+
+
+
 /* 4 ------- Footer ------- */
 footer.site-footer {
-  background: #30313e;
+  background: #111;
   bottom: 0;
-  height: 90px;
+  
+  height: 50px;
   padding: 34px 45px;
   position: absolute;
-  width: 100%; }
+  width: 100%; 
+  }
+  
   footer.site-footer .copyright {
-    color: #565764;
+    color: #111;
     display: inline-block;
     font-size: 12px;
     line-height: 20px;

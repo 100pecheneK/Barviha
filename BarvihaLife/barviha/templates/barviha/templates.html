@@ -32,6 +32,8 @@
         rel="stylesheet">
 
     <!-- Bootstrap CSS File -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
     <link href="{% static 'barviha/lib/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
 
     <!-- Libraries CSS Files -->
@@ -77,6 +79,8 @@
                     <li><a href="#testimonials">Отзовы</a></li>
                     <li><a href="#team">Наша команда</a></li>
                     -->
+                    <li><a href="{% url 'add_blog' %}">office</a></li>
+
                     <li><a href="{% url 'barviha-list_1' %}">Квартиры</a></li>
                     <li><a href="{% url 'barviha-list_2' %}">Аренда</a></li>
                     <li><a href="{% url 'barviha-list_3' %}">Дома</a></li>
