@@ -1,0 +1,163 @@
+{% load cms_tags menu_tags sekizai_tags   %}
+{% load static %}
+<!doctype html>
+<html>
+
+<head>
+    <title>{% block title %}wenzel.w{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="Pursuit Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design">
+
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="{% static 'django_cms_example/base/css/bootstrap.css" rel="stylesheet' %}">
+    <link href="{% static 'django_cms_example/base/css/mdb.css" rel="stylesheet' %}">
+    <link href="{% static 'django_cms_example/base/styles/main.css" rel="stylesheet' %}">
+    <!-- подключение css-файла -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+    <!-- подключение js-файла -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+
+    <!-- подключение нужной версии jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- подключение popper.js, необходимого для корректной работы некоторых плагинов Bootstrap 4 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+</head>
+
+<style type="text/css">
+    .nav {
+        padding-left: 0;
+    }
+
+    .nav li {
+        display: inline;
+        list-style-type: none;
+        padding-right: 20px;
+    }
+
+    .container {
+        width: 940px;
+        margin: 0 auto
+    }
+
+    .content {
+        float: left;
+        width: 80%;
+    }
+
+    .sidebar {
+        float: left;
+        width: 20%;
+    }
+</style>
+{% render_block "css" %}
+</head>
+
+<body id="top">
+
+    {% cms_toolbar %}
+    <!-- Header -->
+
+    <header>
+            <!-- Navbar-->
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar bg-dark" id="navbar">
+              <div class="container"><a class="navbar-brand" href="#"><strong>Material Landing</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarContent">
+                  <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                  </ul><a class="btn btn-primary btn-rounded my-0" href="https://templateflip.com/templates/material-landing" target="_blank">Download</a>
+                </div>
+              </div>
+            </nav>
+   
+
+    <!-- //header -->
+        
+    
+            <nav class="navbar navbar-dark bg-dark">
+                    <span class="navbar-brand mb-0 h2">wenzel.w</span>
+                 
+                    
+                              <li class="nav-item">
+                                  {% show_menu 0 100 100 100  %}
+                            </li>
+                
+            </li>
+        </ul>
+        <div>
+ </nav>
+</header>
+
+
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+
+    </div>
+    <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+    </nav>
+    </header>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    {% block header %}
+    <header class="intro-header" style="background-image: url('{{ STATIC_URL }}img/about-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>{% placeholder "title" %}</h1>
+                        <hr class="small">
+                        <span class="subheading">{% placeholder "sub_title" %}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    {% endblock header %}
+
+    <!-- Main Content -->
+    <div class="container">
+        {% block content %}{% endblock content %}
+    </div>
+
+    <hr>
+
+
+    <!--footer-->
+    <footer>
+        {% static_placeholder 'footer' %}
+    </footer>
+    <!--end footer-->
+
+    <script type="text/javascript" src="{% static 'django_cms_example/base/js/jquery-3.2.1.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'django_cms_example/base/js/popper.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'django_cms_example/base/js/bootstrap.min.js'%}"></script>
+    <script type="text/javascript" src="{% static 'django_cms_example/base/js/mdb.min.js'%}"></script>
+    <script>new WOW().init();</script>
+    {% render_block "js" %}
+</body>
+
+</html>
