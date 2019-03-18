@@ -1,9 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="utf-8" />
     <title>MyBlog</title>
+
+    <link rel="stylesheet" href= "static/css/main.css">
     {% block extrahead %}
     {% endblock %}
 </head>
@@ -14,16 +17,16 @@
         <div class="navbar-inner">
             <div class="container">
                 <div class="brand">My Blog</div>
-                <a href="{% url 'list' %}" class="">Список постов</a></li>
+                <a href="{% url 'list' %}" class="">Список постов</a>
             </div>
         </div>
 
     </div>
 
-    <div class="container">
+    <div class="asf">
         {% block content %}Empty page{% endblock %}
-    </div> <!-- container -->
-
+    </div> 
+    <p>HAHAHAHA</p>
 </body>
 
 </html>
