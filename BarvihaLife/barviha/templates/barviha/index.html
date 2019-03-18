@@ -28,7 +28,8 @@
   <link href="{% static 'barviha/favicon.ico'%}" rel="shortcut icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+    rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
   <link href="{% static 'barviha/lib/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
@@ -49,11 +50,6 @@
 </head>
 
 <body>
-  
-  
-    
-  
-  
   <div id="preloader"></div>
 
   <!--==========================
@@ -67,60 +63,67 @@
         </div>
 
         <h1>Добро Пожаловать на БарвихаLife</h1>
-        <h2>Мы предлагаем  <span class="rotating">Огромный выбор обьектов недвижимости, Подбор и поиск обьекта, Полное сопровождение сделки и юридическая чистота</span></h2>
+        <h2>Мы предлагаем <span class="rotating">Огромный выбор обьектов недвижимости, Подбор и поиск обьекта, Полное
+            сопровождение сделки и юридическая чистота</span></h2>
         <div class="actions">
-          <a href="{% url 'barviha-list_1' %}" class="btn-get-started">Подбор Недвижимости</a>
+          <a href="#about" class="btn-get-started">Подбор Недвижимости</a>
           <a href="#services" class="btn-services">Наши Услуги</a>
         </div>
       </div>
     </div>
   </section>
-{% block Hero_Section %}
-  <!--==========================
+
+     <!--==========================
   Header Section
   ============================-->
   <header id="header">
-    <div class="container">
+      <div class="container">
 
-      <div id="logo" class="pull-left">
-        <a href="#hero"><img src="{% static 'barviha/img/city.png'%}" alt="" title="" /></img></a>
-        <!-- Uncomment below if you prefer to use a text image -->
-        <!--<h1><a href="#hero">Header 1</a></h1>-->
+          <div id="logo" class="pull-left">
+              <a href="#hero"><img src="{% static 'barviha/img/city.png'%}" alt="" title="" /></img></a>
+              <!-- Uncomment below if you prefer to use a text image -->
+              <!--<h1><a href="#hero">Header 1</a></h1>-->
+          </div>
+
+          <nav id="nav-menu-container">
+              <ul class="nav-menu">
+                  <li class="menu-active"><a href="{% url 'barviha-home' %}">Главная</a></li>
+                  <!--
+                  <li><a href="#about">О Нас</a></li>
+                  <li><a href="#services">Услуги</a></li>
+                  <li><a href="#portfolio">Портфолио</a></li>
+                  <li><a href="#testimonials">Отзовы</a></li>
+                   -->
+                  <li><a href="{% url 'add_blog' %}">office</a></li>
+
+                  <li><a href="{% url 'barviha-list_1' %}">Квартиры</a></li>
+                  <li><a href="{% url 'barviha-list_2' %}">Аренда</a></li>
+                  <li><a href="{% url 'barviha-list_3' %}">Дома</a></li>
+                  <li class="menu-has-children"><a href="">О Нас</a>
+                      <ul>
+                          <li><a href="#">Портфолио</a></li>
+                          <li class="menu-has-children"><a href="#">Вакансии</a>
+                              <ul>
+                                  <li><a href="#">Deep Drop Down 1</a></li>
+                                  <li><a href="#">Deep Drop Down 2</a></li>
+                                  <li><a href="#">Deep Drop Down 3</a></li>
+                                  <li><a href="#">Deep Drop Down 4</a></li>
+                                  <li><a href="#">Deep Drop Down 5</a></li>
+                              </ul>
+                          </li>
+                          <li><a href="#">Отзовы</a></li>
+                          <li><a href="#">Наша команда</a></li>
+                          <li><a href="#">Drop Down 5</a></li>
+                      </ul>
+                  </li>
+                  <li><a href="#contact">Связаться с нами</a></li>
+              </ul>
+          </nav>
+          <!-- #nav-menu-container -->
       </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          <li class="menu-active"><a href="#hero">Главная</a></li>
-          <li><a href="#about">О Нас</a></li>
-          <li><a href="#services">Услуги</a></li>
-          <li><a href="#portfolio">Портфолио</a></li>
-          <li><a href="#testimonials">Отзовы</a></li>
-          <li><a href="#team">Наша команда</a></li>
-          <li class="menu-has-children"><a href="">ЕщЁ</a>
-            <ul>
-              <li><a href="#">Контакты</a></li>
-              <li class="menu-has-children"><a href="#">Вакансии</a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-              <li><a href="#">Drop Down 5</a></li>
-            </ul>
-          </li>
-          <li><a href="#contact">Связаться с нами</a></li>
-        </ul>
-      </nav>
-      <!-- #nav-menu-container -->
-    </div>
   </header>
   <!-- #header -->
-{% endblock Hero_Section %}
+
   <!--==========================
   About Section
   ============================-->
@@ -144,24 +147,31 @@
         <div class="col-md-6 about-content">
           <h2 class="about-title">Мы предоставляем отличные услуги и предложения</h2>
           <p class="about-text">
-            Покупка или продажа недвижимости — зачастую дело хлопотное и отнимающее немало времени и сил. Застраховать себя от излишнего беспокойства и заручиться поддержкой профессионалов в этом важнейшем вопросе, можно, обратившись в агентство недвижимости. 
+            Покупка или продажа недвижимости — зачастую дело хлопотное и отнимающее немало времени и сил. Застраховать
+            себя от излишнего беспокойства и заручиться поддержкой профессионалов в этом важнейшем вопросе, можно,
+            обратившись в агентство недвижимости.
           </p>
           <p class="about-text">
-            • наличие постоянного офиса и интернет-сайта;<br> 
-			• широчайший спектр услуг; <br>
-			• высокий профессионализм сотрудников; <br>
-			• грамотное юридическое сопровождение; <br>
-			• работа со всеми новостройками России; <br>
-			• большая база объектов недвижимости; <br>
-			• еженедельные свежие предложения по продаже; <br>
-			• акции, позволяющие клиентам экономить; <br>
-			• распродажи объектов недвижимости. <br>
+            • наличие постоянного офиса и интернет-сайта;<br>
+            • широчайший спектр услуг; <br>
+            • высокий профессионализм сотрудников; <br>
+            • грамотное юридическое сопровождение; <br>
+            • работа со всеми новостройками России; <br>
+            • большая база объектов недвижимости; <br>
+            • еженедельные свежие предложения по продаже; <br>
+            • акции, позволяющие клиентам экономить; <br>
+            • распродажи объектов недвижимости. <br>
           </p>
           <p class="about-text">
-            Обеспечим чистоту сделки и ее грамотное юридическое сопровождение. Широкая база предложений позволит нам удовлетворить ваши запросы, сэкономить время на подбор необходимых вариантов и денежные средства на дополнительные консультации. 
-		  </p>
-		  <p class="about-text">
-            Наши предложения объектов недвижимости соответствуют спросу на рынке. Благодаря актуальности нашей базы вы легко сможете подобрать себе нужный вариант. Если все же вы не увидели того, что искали — обязательно сообщите нам об этом, и мы индивидуально подберем для вас предложение, полностью соответствующее пожеланиям. 
+            Обеспечим чистоту сделки и ее грамотное юридическое сопровождение. Широкая база предложений позволит нам
+            удовлетворить ваши запросы, сэкономить время на подбор необходимых вариантов и денежные средства на
+            дополнительные консультации.
+          </p>
+          <p class="about-text">
+            Наши предложения объектов недвижимости соответствуют спросу на рынке. Благодаря актуальности нашей базы вы
+            легко сможете подобрать себе нужный вариант. Если все же вы не увидели того, что искали — обязательно
+            сообщите нам об этом, и мы индивидуально подберем для вас предложение, полностью соответствующее
+            пожеланиям.
           </p>
         </div>
       </div>
@@ -177,7 +187,8 @@
         <div class="col-md-12">
           <h3 class="section-title">Наши Услуги</h3>
           <div class="section-title-divider"></div>
-          <p class="section-description">Агентство «Барвиха Life» предоставляет риэлторские услуги в ключевых сегментах рынка недвижимости</p>
+          <p class="section-description">Агентство «Барвиха Life» предоставляет риэлторские услуги в ключевых сегментах
+            рынка недвижимости</p>
         </div>
       </div>
 
@@ -185,48 +196,52 @@
         <div class="col-md-4 service-item">
           <div class="service-icon"><i class="fa fa-desktop"></i></div>
           <h4 class="service-title"><a href="">Составление договоров</a></h4>
-          <p class="service-description">Купли-продажи (квартиры, комнаты, доли, земельные участки, дачи, жилые дома, гаражи)<br>
-			• Дарения недвижимого имущества<br>
-			• Предварительные договора купли-продажи недвижимости<br>
-			• Аренды недвижимого имущества<br>
-			• Сбор, оформление, формирование пакетов документов для всех видов сделок и любых операций с недвижимостью:<br>
-			- купля-продажа,<br>
-			- дарение,<br>
-			- наследство,<br>
-			- приватизация,<br>
-			• Сопровождение:<br>
-			- Сопровождение любых сделок с объектами недвижимости<br>
-			- Сопровождение готового варианта купли - продажи квартиры (разработка схемы расчетов и проведения сделки. Проверка и формирование пакета документов для сделки, составление договора, регистрация перехода права собственности в регистрирующем органе, получение и проверка документов после регистрации)</p>
+          <p class="service-description">Купли-продажи (квартиры, комнаты, доли, земельные участки, дачи, жилые дома,
+            гаражи)<br>
+            • Дарения недвижимого имущества<br>
+            • Предварительные договора купли-продажи недвижимости<br>
+            • Аренды недвижимого имущества<br>
+            • Сбор, оформление, формирование пакетов документов для всех видов сделок и любых операций с недвижимостью:<br>
+            - купля-продажа,<br>
+            - дарение,<br>
+            - наследство,<br>
+            - приватизация,<br>
+            • Сопровождение:<br>
+            - Сопровождение любых сделок с объектами недвижимости<br>
+            - Сопровождение готового варианта купли - продажи квартиры (разработка схемы расчетов и проведения сделки.
+            Проверка и формирование пакета документов для сделки, составление договора, регистрация перехода права
+            собственности в регистрирующем органе, получение и проверка документов после регистрации)</p>
         </div>
         <div class="col-md-4 service-item">
           <div class="service-icon"><i class="fa fa-bar-chart"></i></div>
           <h4 class="service-title"><a href="">Ипотека</a></h4>
-          <p class="service-description">Оформление и сопровождение ипотечных сделок на любой стадии. 
-			Консультирование по всем вопросам, связанным с ипотечным кредитом, и покупкой с его использованием.</p>
+          <p class="service-description">Оформление и сопровождение ипотечных сделок на любой стадии.
+            Консультирование по всем вопросам, связанным с ипотечным кредитом, и покупкой с его использованием.</p>
         </div>
         <div class="col-md-4 service-item">
           <div class="service-icon"><i class="fa fa-paper-plane"></i></div>
           <h4 class="service-title"><a href="">Аренда</a></h4>
-          <p class="service-description">Помощь арендодателям при сдаче в аренду любых объектов недвижимости. 
-			Помощь арендаторам в поиске вариантов для аренды любых объектов недвижимости.</p>
+          <p class="service-description">Помощь арендодателям при сдаче в аренду любых объектов недвижимости.
+            Помощь арендаторам в поиске вариантов для аренды любых объектов недвижимости.</p>
         </div>
         <div class="col-md-4 service-item">
           <div class="service-icon"><i class="fa fa-photo"></i></div>
           <h4 class="service-title"><a href="">Купля-продажа</a></h4>
-          <p class="service-description">Помощь в продаже объектов недвижимости на любой стадии (комнаты, квартиры, жилые дома, коттеджи, земельные участки ИЖС и СНТ, дачи, гаражи, коммерческая недвижимость).<br>
-			Помощь при покупке любых объектов недвижимости на любой стадии.</p>
+          <p class="service-description">Помощь в продаже объектов недвижимости на любой стадии (комнаты, квартиры,
+            жилые дома, коттеджи, земельные участки ИЖС и СНТ, дачи, гаражи, коммерческая недвижимость).<br>
+            Помощь при покупке любых объектов недвижимости на любой стадии.</p>
         </div>
         <div class="col-md-4 service-item">
           <div class="service-icon"><i class="fa fa-road"></i></div>
           <h4 class="service-title"><a href="">Юрист</a></h4>
           <p class="service-description">-ипотечный брокер<br>
-			-страхование недвижимости</p>
+            -страхование недвижимости</p>
         </div>
         <div class="col-md-4 service-item">
           <div class="service-icon"><i class="fa fa-shopping-bag"></i></div>
           <h4 class="service-title"><a href="">Консультации</a></h4>
           <p class="service-description">-Бесплатные консультации наших специалистов<br>
-			-Все операции с недвижимостью</p>
+            -Все операции с недвижимостью</p>
         </div>
       </div>
     </div>
@@ -258,7 +273,8 @@
         <div class="col-md-12">
           <h3 class="section-title">Portfolio</h3>
           <div class="section-title-divider"></div>
-          <p class="section-description">Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus ses haec dicturum fuisse</p>
+          <p class="section-description">Si stante, hoc natura videlicet vult, salvam esse se, quod concedimus ses haec
+            dicturum fuisse</p>
         </div>
       </div>
 
@@ -362,7 +378,12 @@
         </div>
         <div class="col-md-9">
           <div class="quote">
-            <b><img src="{% static 'barviha/img/quote_sign_left.png'%}" alt=""></b> Обратился, потому что это известное в городе агентство с наивысшим рейтингом. Проживаю в г.Нижний Тагил, и необходимо было продать трехкомнатную квартиру в Цетре города за короткий срок. Агентство справилось блестяще, покупатель нашелся быстро, и в течение двух недель была совершена сделка. Квартира была продана без ремонта, что приятно удивило. Безопасность при сделке на высшем уровне, несмотря на сложную схему. Я доволен результатом и рекомендую всем данное агентство. <small><img src="{% static 'barviha/img/quote_sign_right.png'%}" alt=""></small>
+            <b><img src="{% static 'barviha/img/quote_sign_left.png'%}" alt=""></b> Обратился, потому что это известное
+            в городе агентство с наивысшим рейтингом. Проживаю в г.Нижний Тагил, и необходимо было продать
+            трехкомнатную квартиру в Цетре города за короткий срок. Агентство справилось блестяще, покупатель нашелся
+            быстро, и в течение двух недель была совершена сделка. Квартира была продана без ремонта, что приятно
+            удивило. Безопасность при сделке на высшем уровне, несмотря на сложную схему. Я доволен результатом и
+            рекомендую всем данное агентство. <small><img src="{% static 'barviha/img/quote_sign_right.png'%}" alt=""></small>
           </div>
         </div>
       </div>
@@ -370,7 +391,11 @@
       <div class="row">
         <div class="col-md-9">
           <div class="quote">
-            <b><img src="{% static 'barviha/img/quote_sign_left.png'%}" alt=""></b> Обратились за помощью в подборе квартиры на покупку 18.01.2019г. Александра подбирала нам квартиру, предложила несколько вариантов, уже на 3-ий день удалось найти необходимую квартиру. При работе с Александрой мы были уверены, что все её действия квалифицированные. Мы довольны результатом и благодарим Александру за быструю и компетентную помощь. <small><img src="{% static 'barviha/img/quote_sign_right.png'%}" alt=""></small>
+            <b><img src="{% static 'barviha/img/quote_sign_left.png'%}" alt=""></b> Обратились за помощью в подборе
+            квартиры на покупку 18.01.2019г. Александра подбирала нам квартиру, предложила несколько вариантов, уже на
+            3-ий день удалось найти необходимую квартиру. При работе с Александрой мы были уверены, что все её действия
+            квалифицированные. Мы довольны результатом и благодарим Александру за быструю и компетентную помощь. <small><img
+                src="{% static 'barviha/img/quote_sign_right.png'%}" alt=""></small>
           </div>
         </div>
         <div class="col-md-3">
@@ -458,7 +483,7 @@
       </div>
     </div>
   </section>
-{% block Footer_Section %}
+
   <!--==========================
   Contact Section
   ============================-->
@@ -499,19 +524,23 @@
             <div id="errormessage"></div>
             <form action="" method="post" role="form" class="contactForm">
               <div class="form-group">
-                <input type="text" name="name" class="form-control" id="name" placeholder="Ваше имя" data-rule="minlen:4" data-msg="Пожалуйста, введите не менее 4 символов" />
+                <input type="text" name="name" class="form-control" id="name" placeholder="Ваше имя" data-rule="minlen:4"
+                  data-msg="Пожалуйста, введите не менее 4 символов" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Ваша почта" data-rule="email" data-msg="Пожалуйста, введите действительный адрес электронной почты" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Ваша почта" data-rule="email"
+                  data-msg="Пожалуйста, введите действительный адрес электронной почты" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Город" data-rule="minlen:4" data-msg="Пожалуйста, введите название города" />
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Город" data-rule="minlen:4"
+                  data-msg="Пожалуйста, введите название города" />
                 <div class="validation"></div>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Пожалуйста, напишите что-нибудь для нас" placeholder="Сообщение"></textarea>
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Пожалуйста, напишите что-нибудь для нас"
+                  placeholder="Сообщение"></textarea>
                 <div class="validation"></div>
               </div>
               <div class="text-center"><button type="submit">Отправить сообщение</button></div>
@@ -522,7 +551,7 @@
       </div>
     </div>
   </section>
-  
+
   <!--==========================
   Footer
 ============================-->
@@ -547,7 +576,7 @@
     </div>
   </footer>
   <!-- #footer -->
-  {% endblock Footer_Section %}
+
   <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
   <!-- Required JavaScript Libraries -->

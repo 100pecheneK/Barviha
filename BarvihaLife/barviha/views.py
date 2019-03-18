@@ -1,20 +1,16 @@
 from django.shortcuts import render
 
-news = [
-    {
-        'title': 'Первая Запись',
-        'text': 'Просто большой текс для первой записи',
-        'data': '22 февраля'
-    }
-]
+
 
 def home(request):
-    data = {
-        'home' : home,
-        'title': 'Главная страница'
-    }
-    return render(request, 'barviha/index.html', data)
+    return render(request, 'barviha/index.html', {'title':'Главная страница'})
 
 def list_1(request):
     return render(request, 'barviha/list_1.html', {'title':'Лист 1'})
+
+def list_2(request):
+    return render(request, 'barviha/list_2.html', {'title':'Лист 2'})
+
+def list_3(request):
+    return render(request, 'barviha/list_3.html', {'title':'Лист 3'})
 

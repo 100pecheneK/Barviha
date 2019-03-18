@@ -1,14 +1,20 @@
 {% extends 'the_main/tampletes.html' %}
+{% load crispy_forms_tags %}
 {% block tmp_section %}
 <main role="main" class="container">
   <div class="row">
     <div class="col-md-12">
       <div class="jumbotron">
-        <h1>Navbar example</h1>
-        <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll,
-          it
-          will remain fixed to the top of your browser’s viewport.</p>
-        <a class="btn btn-lg btn-primary" href="#" role="button">View navbar docs »</a>
+        <h1>Скоро все откроется</h1>
+        <p class="lead">Оставте Ваш имейл по форме ниже</p>
+        <form action="" method="post" class="post-form">
+          {% csrf_token %}
+          <table>
+              {{form|crispy}}
+          </table>
+            <button type="submit" class="btn btn-lg btn-primary">отправить</button>
+      </form>
+
       </div>
     </div>
   </div>
