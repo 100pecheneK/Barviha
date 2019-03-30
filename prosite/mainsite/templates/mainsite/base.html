@@ -1,0 +1,50 @@
+{% load static %}{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'adminsite/css/styles.css' %}">
+</head>
+<body>
+<section class="pricing-table">
+    <div class="container">
+        <div class="block-heading">
+            <h2>Квартиры</h2>
+        </div>
+        <div class="row justify-content-md-center">
+            {% for room in rooms %}
+                <div class="col-md-5 col-lg-4">
+                    <div class="item">
+                        <div class="heading">
+                            <h2>{{ room.name }}</h2>
+                            <h4>{{ room.сategories }}</h4>
+                        </div>
+                        <p>{{ room.living_space }}</p>
+                        <div class="features">
+                            <h4><span class="feature">Цена сегодня</span> : <span class="value">{{ room.price }}</span></h4>
+                            <h4><span class="feature">Район</span> : <span class="value">{{ room.district }}</span></h4>
+                            <h4><span class="feature">Адрес</span> : <span class="value">{{ room.name }} д.{{ room.House_number }}</span></h4>
+                        </div>
+                        <div class="price">
+                            <h4>{{ room.price }}</h4>
+                        </div>
+                        <button class="btn btn-block btn-outline-primary" type="submit">Побробнее</button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

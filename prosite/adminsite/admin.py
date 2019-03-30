@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Room, Rent, District
+from .models import Room, Rent, District, Сategories
 
 admin.site.site_header = 'wenzel administration'
 
@@ -18,3 +18,4 @@ class RentAdmin(admin.ModelAdmin):
 admin.site.register(Rent, RentAdmin)
 admin.site.register(Room, RoomAdmin)
 admin.site.register(District)
+admin.site.register(Сategories)
